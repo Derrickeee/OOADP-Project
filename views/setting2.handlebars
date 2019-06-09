@@ -1,0 +1,116 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/setting.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="setting.js"></script>
+
+
+
+    <script src="JavaScript/jquery-1.10.2.js" type="text/javascript"></script>
+
+</head>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<body id="setting2">
+    <div class="container">
+        <div id="menu">
+
+            <div class="row">
+
+                <div class="col-md-3">
+                    <ul class="nav nav-pills nav-stacked admin-menu">
+
+
+                        <li class="setting"><a href="/setting">Account Info</a></li>
+
+                        <li class="setting2"><a href="/setting2">Security</a></li>
+
+                        <li class="billing"><a href="/billing">Billing</a></li>
+
+                    </ul>
+                </div>
+
+
+
+
+
+
+                <div class="col-md-9  admin-content" id="profile">
+                    <div class="panel panel-info" style="margin: 1em;">
+                        <div class="panel-heading">
+                            <h3 class="panel-title2">What are 2FA?</h3>
+                        </div>
+                        <div class="panel-body">
+                            <h1 style="font-weight:bold; font-size:25px;"> 2FA is an authentication method setup for
+                                account restriction on this account to verify and protect the user's credentials</h1>
+                        </div>
+                    </div>
+                    <div class="panel panel-info" style="margin: 1em;">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">2FA</h3>
+                        </div>
+                        <div class="panel-body">
+                            Your account is not protected!
+
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="panel panel-info" style="margin: 1em;">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Method 1: Email code verification</h3>
+
+                        </div>
+                        <div class="panel-body">
+
+                            <div>
+                                When you log in from a new device, codes will be sent to {{user.email}}
+
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-info" style="margin: 1em;">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Method 2: Phone code verification</h3>
+                        </div>
+                        <div class="panel-body">
+                            When you log in from a new devices, codes will be sent to {{user.phone}}
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="panel panel-info" style="margin: 1em;">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Secure Sign Out</h3>
+                        </div>
+                        <div class="panel-body">
+                            Sign out of all sessions
+
+                            <button type="button"  onclick="">Click Me!</button>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>

@@ -1,0 +1,42 @@
+<div class="c">
+<div>
+
+		<h3>Edit</h3>
+		<form action="/saveEditedFeedback/{{video.id}}?_method=PUT" method="post">
+			<div class="row"> {{!—- row 1--}}
+				<div class="col-lg-9">
+					<div class="form-group">
+						<label for="title">Product Name:</label>
+					</div>
+					 <div>
+                                            <label>Please rate the menu plan</label>
+											<br>
+                    <span class="starRating">
+                    <input id="rating5" type="radio" name="rating" value="5" {{radioCheck video.rating '5'}}>
+                    <label for="rating5">5</label>
+                    <input id="rating4" type="radio" name="rating" value="4" {{radioCheck video.rating '4'}}>
+                    <label for="rating4">4</label>
+                    <input id="rating3" type="radio" name="rating" value="3" {{radioCheck video.rating '3'}}>
+                    <label for="rating3">3</label>
+                    <input id="rating2" type="radio" name="rating" value="2" {{radioCheck video.rating '2'}}>
+                    <label for="rating2">2</label>
+                    <input id="rating1" type="radio" name="rating" value="1" {{radioCheck video.rating '1'}}>
+                    <label for="rating1">1</label>
+                  </span>
+                  <br>
+                </div>
+					<div class="form-group">
+						{{!—- Story --}}
+						<label for="comments">Other Comments</label>
+						<textarea class="form-control" id="comments" name="comments" rows="12">{{video.comments}}</textarea>
+					</div>
+
+				<div class="form-group">
+			<button id="butAddVideo" type="submit" class="btn btn-warning">Submit
+			</button>
+			</div>
+</div>
+</div>
+</div>
+</div>
+		</form>

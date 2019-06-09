@@ -1,0 +1,85 @@
+<div class="container">
+	{{#if videos}}
+
+		<h3 class="text-warning">Feedback</h3>
+		{{#each videos}}
+		<div class="card-border">
+			<div class="card-body">
+						<div class="col-sm-12 col-md-12 col-lg-8">
+						<div class="row">
+				<h5 class="card-title">Product: {{title}}</h5>
+						</div></div>
+				{{!-- Practical 09 Exercise 02 --}}
+				<div class="row">
+					<div class="col-sm-12 col-md-12 col-lg-8">
+						<div class="row"> {{!-- subtitles, language... --}}
+							<div class="col">
+								
+								<p>Rating: 	{{{generateHTMLforLoop rating}}}</p>
+				<div>
+			
+				</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-md-6 col-lg-10">
+								<p>Comments: {{comments}}</p>
+							</div>
+							
+		
+							</div>
+								<div class="row">
+							<div class="col-sm-12 col-md-6 col-lg-10">
+								<p>Product Details: {{productdetails}}</p>
+							</div>
+						</div>
+													<div class="row">
+							<div class="col-sm-12 col-md-6 col-lg-10">
+								<p>Reply: {{reply}}</p>
+						</div>
+					</div>
+
+				</div>
+									<div class="col">
+						<p class="font-italic"></p>
+
+						<a href="/reply/{{id}}" class="card-link">
+							<i class="fas fa-pencil-alt"></i>
+						Reply
+						</a>
+					</div>
+			</div>
+
+
+		</div>
+		
+		<h4></h4>
+</div>
+<hr>
+		{{/each}}
+	
+
+
+	<div class="pagination">
+    {{#paginate pagination type="first"}}
+      {{#if disabled}}{{/if}}<a href="?p={{n}}">First</a>
+    {{/paginate}}
+    {{#paginate pagination type="previous"}}
+      {{#if disabled}}{{/if}}<a href="?p={{n}}">Prev</a>
+    {{/paginate}}
+    {{#paginate pagination type="middle" limit="7"}}
+      {{#if active}}{{/if}}<a href="?p={{n}}">{{n}}</a>
+    {{/paginate}}
+    {{#paginate pagination type="next"}}
+      {{#if disabled}}{{/if}}<a href="?p={{n}}">Next</a>
+    {{/paginate}}
+    {{#paginate pagination type="last"}}
+      {{#if disabled}}{{/if}}<a href="?p={{n}}">Last</a>
+    {{/paginate}}
+</div>
+</div>
+	{{else}}
+	<h3>No feedback given</h3>
+	{{/if}}
+</div>
+<br>

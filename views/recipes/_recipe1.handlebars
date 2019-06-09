@@ -1,0 +1,31 @@
+<div class="container">
+	<!--for picture and description-->
+	<div style="padding:20px;float:left" class="col-6">
+		<button style="border-style:solid; padding: 2px"><a href = "/storePage">Return to Menu</a></button>
+		<img src="https://i.imgur.com/OFNqu8z.png" class="rounded float-right" alt="..." width="500" height="400" style="border-style: solid">
+		<br>
+		<button style="border-style:solid; padding: 2px; background-color: transparent"><a href = "/storePage">Add to cart</a></button>
+		<input type="number" value="1" min="1">
+		<!--maybe can use line breaker instead or new p each line-->
+	</div>
+	<!--Actual recipe-->
+	<div style="padding:20px;float:right" class="col-6">
+		<button style="float: right; border-style:solid; padding: 2px"><a href = "/shopCartPage">Go to Cart</a></button>
+		<h2 style="text-decoration: underline">{{name}}</h2>
+		<p>Price: ${{price}}</p>
+		<p>Estimated Time To Cook: {{cookTime}}</p>
+		<p>Difficulty Level: {{difficulty}}</p>
+		<p>Calories Per Serving: {{calories}}</p>
+		<p>Additonal Info: {{addInfo}}</p>
+
+		<h2 style="text-decoration: underline">Recipe Instructions</h2>
+		<p style="word-wrap: break-word">
+			Step 1: break Egg<br>
+			Step 2: beat egg<br>
+			Step 3: put egg in pan and stir<br>
+			Step 4: add capsican to pan and stir with Egg<br>
+			Step 5: add pepper
+		</p>
+	</div>
+
+</div>

@@ -1,0 +1,97 @@
+<!--.col-	.col-sm-	.col-md-	.col-lg-	.col-xl- -->
+
+
+<div class="container">
+	{{#if videos}}
+
+		<h3 class="text-warning">Feedback</h3>
+		<div>You have rated this service a total of <span id="results"></span> times.</div>
+		{{#each videos}}
+		<div class="card-border">
+			<div class="card-body">
+						<div class="row">
+							<div class="col-sm-12 col-md-6 col-lg-10">
+				<h5 class="card-title">Product: {{title}}</h5>
+				</div></div>
+				{{!-- Practical 09 Exercise 02 --}}
+				<div class="row">
+					<div class="col-sm-12 col-md-12 col-lg-8">
+						<div class="row"> {{!-- subtitles, language... --}}
+							<div class="col">
+								
+								<p>Rating: 	{{{generateHTMLforLoop rating}}}</p>
+				<div>
+			
+				</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-md-6 col-lg-10">
+								<p>Comments: {{comments}}</p>
+							</div>
+						</div>
+								<div class="row">
+							<div class="col-sm-12 col-md-6 col-lg-10">
+								<p>Product Details: {{productdetails}}</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-md-6 col-lg-10">
+								<p>Reply: {{reply}}</p>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<p class="font-italic"></p>
+						<a href="/edit/{{id}}" class="card-link">
+							<i class="fas fa-pencil-alt"></i>
+							Edit
+						</a>
+						<a href="/delete/{{id}}" class="card-link" data-toggle="confirmation"
+							data-title="Confirm delete?">
+							<i class="far fa-trash-alt"></i>
+							Delete
+						</a>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+		
+		<h4></h4>
+<hr>
+		{{/each}}
+	
+	<br>
+	<div class="pagination">
+    {{#paginate pagination type="first"}}
+      {{#if disabled}}{{/if}}<a href="?p={{n}}">First</a>
+    {{/paginate}}
+    {{#paginate pagination type="previous"}}
+      {{#if disabled}}{{/if}}<a href="?p={{n}}">Prev</a>
+    {{/paginate}}
+    {{#paginate pagination type="middle" limit="7"}}
+      {{#if active}}{{/if}}<a href="?p={{n}}">{{n}}</a>
+    {{/paginate}}
+    {{#paginate pagination type="next"}}
+      {{#if disabled}}{{/if}}<a href="?p={{n}}">Next</a>
+    {{/paginate}}
+    {{#paginate pagination type="last"}}
+      {{#if disabled}}{{/if}}<a href="?p={{n}}">Last</a>
+    {{/paginate}}
+</div>
+	{{else}}
+	<h3>No feedback given</h3>
+	{{/if}}
+</div>
+<br>
+<script>
+	myFunction();
+
+function myFunction() {
+var x = document.getElementsByClassName("card-border");
+  document.getElementById("results").innerHTML = x.length;
+
+  }
+</script>

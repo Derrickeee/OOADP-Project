@@ -1,0 +1,109 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="/css/register.css">
+</head>
+
+
+<img class="logo" src="">
+<form method="post" action="../user/register">
+
+	<!--Bootsrap 4 CDN-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<!--Fontawesome CDN-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+		integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+	<!--Custom styles-->
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+	<!--Custom social media icon-->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<body>
+		<div class="container">
+			<div class="d-flex justify-content-center h-100">
+				<div class="card">
+					<div class="card-header">
+						<br>
+						<h3 class="text-center"> Register</h3>
+
+
+					</div>
+
+					<div class="card-body">
+						<form>
+							<div class="form-group">
+								<label for="email" class="labels">Email:</label>
+								<div class="input-group form-group">
+
+									<div class="input-group-prepend">
+
+										<span class="input-group-text"><i class="fas fa-user"></i></span>
+
+									</div>
+
+									<input type="email" name="email" class="form-control" required value="{{email}}" />
+
+								</div>
+								<div class="form-group">
+									<label for="password" class="labels">Password:</label>
+									<div class="input-group form-group">
+										<div class="input-group-prepend">
+
+											<span class="input-group-text"><i class="fas fa-key"></i></span>
+										</div>
+
+										<input type="password" name="password" class="form-control" required
+											value="{{password}}">
+									</div>
+
+								</div>
+
+								<div class="form-group">
+									<label for="password" class="labels">Confirm Password:</label>
+									<div class="input-group form-group">
+										<div class="input-group-prepend">
+
+											<span class="input-group-text"><i class="fas fa-key"></i></span>
+										</div>
+
+										<input type="password" name="password2" class="form-control"
+											value="{{password2}}" required>
+									</div>
+
+								</div>
+								<button type="submit" class="btn float-right login_btn">Continue</button>
+
+
+
+							</div>
+
+					</div>
+
+				</div>
+
+			</div>
+			<h1 style="color: white;">OR</h1>
+		</div>
+
+		<div class="col">
+			<a href="#" class="fb btn"><i class="fa fa-facebook fa-fw">
+
+				</i> Sign up with Facebook
+			</a>
+
+			<a href="#" class="google btn"><i class="fa fa-google fa-fw">
+				</i> Sign up with Gmail &nbsp &nbsp &nbsp
+			</a>
+
+		</div>
+		<div class="remind">
+			Already a member? <a href="/showLogin">Log In</a>
+
+
+		</div>
+	</body>
+
+	</html>
